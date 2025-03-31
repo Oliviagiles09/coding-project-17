@@ -30,3 +30,16 @@ getClientTotal(name) {
   return client ? client.getTotalSpent() : 0;
 }
 }
+// Task 3 
+class VIPCustomer extends Customer {
+  constructor(name, email, vipLevel) {
+    super(name, email);
+    this.vipLevel - vipLevel;
+  }
+
+getTotalSpent() {
+  const totalSpent = super.getTotalSpent();
+  const bonus = totalSpent * 0.10;
+  return totalSpent + bonus;
+}
+}
